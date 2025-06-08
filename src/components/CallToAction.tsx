@@ -85,7 +85,8 @@ const CallToAction = () => {
           {/* Interactive Footer */}
           <div className="border-t-4 border-pure-white pt-8 hover:border-electric-blue transition-colors duration-500">
             <p className="font-mono uppercase tracking-wide text-sm text-pure-white/60 hover:text-pure-white/80 transition-colors duration-300">
-              © 2024 Sigma Wallet. Built with Bitcoin. Powered by Lightning.
+              © 2025 Sigma Wallet. Built with ❤ by <a
+ href="https://x.com/Uli_Boy1?t=GOUZ97jJoOH6_k-4rH5F7A&s=09" >Uliboy</a>. 
             </p>
             <p className="font-mono uppercase tracking-wide text-xs text-pure-white/40 mt-2 hover:text-lime-green transition-colors duration-300 cursor-default">
               Not your keys, not your coins. — Sigma Wallet
