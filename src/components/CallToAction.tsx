@@ -86,7 +86,9 @@ const CallToAction = () => {
           <div className="border-t-4 border-pure-white pt-8 hover:border-electric-blue transition-colors duration-500">
             <p className="font-mono uppercase tracking-wide text-sm text-pure-white/60 hover:text-pure-white/80 transition-colors duration-300">
               © 2025 Sigma Wallet. Built with ❤ by <a
- href="https://x.com/Uli_Boy1?t=GOUZ97jJoOH6_k-4rH5F7A&s=09" >Uliboy</a>. 
+            href="https://x.com/Uli_Boy1?t=GOUZ97jJoOH6_k-4rH5F7A&s=09" 
+            className={`bg-electric-blue hover:bg-electric-blue/90 text-pure-white font-black uppercase tracking-wider px-8 border-4 border-electric-blue neon-glow-blue hover:translate-x-1 hover:translate-y-1 transition-all duration-200 ${isSubscribed ? 'bg-lime-green border-lime-green' : ''}`}
+            >Uliboy</a>. 
             </p>
             <p className="font-mono uppercase tracking-wide text-xs text-pure-white/40 mt-2 hover:text-lime-green transition-colors duration-300 cursor-default">
               Not your keys, not your coins. — Sigma Wallet
