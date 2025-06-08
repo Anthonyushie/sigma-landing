@@ -1,0 +1,346 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brutalist Bitcoin Wallet Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 0% 95%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 0 0% 0%;
+
+    --radius: 0rem;
+
+    /* Brutalist neon colors */
+    --electric-blue: 200 100% 50%;
+    --lime-green: 84 100% 50%;
+    --neon-purple: 280 100% 70%;
+    --stark-black: 0 0% 0%;
+    --pure-white: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    font-feature-settings: "kern" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black uppercase tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-electric-blue {
+    color: hsl(var(--electric-blue));
+  }
+  
+  .text-lime-green {
+    color: hsl(var(--lime-green));
+  }
+  
+  .text-neon-purple {
+    color: hsl(var(--neon-purple));
+  }
+  
+  .bg-electric-blue {
+    background-color: hsl(var(--electric-blue));
+  }
+  
+  .bg-lime-green {
+    background-color: hsl(var(--lime-green));
+  }
+  
+  .bg-neon-purple {
+    background-color: hsl(var(--neon-purple));
+  }
+  
+  .bg-stark-black {
+    background-color: hsl(var(--stark-black));
+  }
+  
+  .border-electric-blue {
+    border-color: hsl(var(--electric-blue));
+  }
+  
+  .border-lime-green {
+    border-color: hsl(var(--lime-green));
+  }
+
+  .neon-glow-blue {
+    box-shadow: 0 0 20px hsl(var(--electric-blue)), 0 0 40px hsl(var(--electric-blue));
+  }
+  
+  .neon-glow-green {
+    box-shadow: 0 0 20px hsl(var(--lime-green)), 0 0 40px hsl(var(--lime-green));
+  }
+
+  .brutalist-border {
+    border: 4px solid black;
+  }
+
+  .brutalist-shadow {
+    box-shadow: 8px 8px 0px black;
+  }
+
+  .border-6 {
+    border-width: 6px;
+  }
+
+  .border-8 {
+    border-width: 8px;
+  }
+
+  .text-shadow-neon {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+
+  /* Enhanced interactive animations */
+  .glitch-effect:hover {
+    animation: glitch 0.3s ease-in-out;
+  }
+
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .pulse-neon {
+    animation: pulse-neon 2s ease-in-out infinite;
+  }
+
+  .bounce-gentle {
+    animation: bounce-gentle 2s ease-in-out infinite;
+  }
+
+  .rotate-hover:hover {
+    animation: rotate-slow 2s linear infinite;
+  }
+
+  .scale-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+  /* Neo-brutalist specific styles */
+  .neo-brutalist-card {
+    border: 6px solid black;
+    box-shadow: 12px 12px 0px black;
+    transform: rotate(-2deg);
+    transition: all 0.3s ease;
+  }
+
+  .neo-brutalist-card:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 6px 6px 0px black;
+  }
+
+  .chunky-text {
+    text-shadow: 4px 4px 0px black;
+  }
+
+  .interactive-shadow:hover {
+    box-shadow: 4px 4px 0px black;
+    transform: translate(4px, 4px);
+  }
+
+  .neon-border:hover {
+    border-color: hsl(var(--electric-blue));
+    box-shadow: 0 0 20px hsl(var(--electric-blue));
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-neon {
+  0%, 100% { 
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+    opacity: 1;
+  }
+  50% { 
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+    opacity: 0.8;
+  }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0px); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(0px); }
+  75% { transform: translateY(-2px); }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  10% { transform: translate(-2px, -2px); }
+  20% { transform: translate(2px, 2px); }
+  30% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  70% { transform: translate(-2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  90% { transform: translate(-2px, -2px); }
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Crazy preloader animations */
+@keyframes crazy-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(90deg) scale(1.1); }
+  50% { transform: rotate(180deg) scale(0.9); }
+  75% { transform: rotate(270deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes glitch-position {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-2px, 2px); }
+  20% { transform: translate(2px, -2px); }
+  30% { transform: translate(-1px, 1px); }
+  40% { transform: translate(1px, -1px); }
+  50% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  70% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+  90% { transform: translate(-2px, 1px); }
+}
+
+@keyframes glitch-text {
+  0%, 100% { 
+    transform: translate(0); 
+    filter: hue-rotate(0deg);
+  }
+  10% { 
+    transform: translate(-2px, -1px); 
+    filter: hue-rotate(90deg);
+  }
+  20% { 
+    transform: translate(1px, 2px); 
+    filter: hue-rotate(180deg);
+  }
+  30% { 
+    transform: translate(-1px, 1px); 
+    filter: hue-rotate(270deg);
+  }
+  40% { 
+    transform: translate(2px, -2px); 
+    filter: hue-rotate(360deg);
+  }
+  50% { 
+    transform: translate(-2px, 2px); 
+    filter: hue-rotate(180deg);
+  }
+  60% { 
+    transform: translate(1px, -1px); 
+    filter: hue-rotate(90deg);
+  }
+  70% { 
+    transform: translate(-1px, -2px); 
+    filter: hue-rotate(270deg);
+  }
+  80% { 
+    transform: translate(2px, 1px); 
+    filter: hue-rotate(0deg);
+  }
+  90% { 
+    transform: translate(-2px, -1px); 
+    filter: hue-rotate(180deg);
+  }
+}
+
+@keyframes glitch-bg {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+@keyframes slide-progress {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 0; }
+}
+
+@keyframes screen-distort {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(2px); }
+}
+
+@keyframes float-random-0 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-10px, -5px) rotate(120deg); }
+  66% { transform: translate(5px, -10px) rotate(240deg); }
+}
+
+@keyframes float-random-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(8px, 12px) rotate(90deg); }
+  66% { transform: translate(-12px, 8px) rotate(180deg); }
+}
+
+@keyframes float-random-2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-8px, 15px) rotate(270deg); }
+  66% { transform: translate(15px, -8px) rotate(45deg); }
+}
+
+@keyframes float-random-3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(12px, -10px) rotate(135deg); }
+  66% { transform: translate(-10px, 12px) rotate(225deg); }
+}
+
+@keyframes float-random-4 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-15px, -8px) rotate(315deg); }
+  66% { transform: translate(8px, 15px) rotate(60deg); }
+}
